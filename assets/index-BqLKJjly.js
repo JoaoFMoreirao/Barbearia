@@ -12,16 +12,16 @@ Error generating stack: `+e.message+`
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #0f0f0f;
-    --surface: #1a1a1a;
-    --surface2: #242424;
-    --border: #2e2e2e;
-    --accent: #d4a843;
-    --accent2: #b8892e;
-    --text: #f0ece4;
-    --muted: #888;
-    --error: #e05353;
-    --success: #3eb87a;
+    --bg: #f0e8dc;
+    --surface: #e8ddd0;
+    --surface2: #ddd0c0;
+    --border: #c8b89a;
+    --accent: #8b5e3c;
+    --accent2: #6e4a2e;
+    --text: #2c1a0e;
+    --muted: #7a6050;
+    --error: #c0392b;
+    --success: #2e7d52;
     --sidebar: 72px;
     --radius: 10px;
   }
@@ -42,6 +42,7 @@ Error generating stack: `+e.message+`
     position: fixed;
     top: 0; left: 0; bottom: 0;
     z-index: 100;
+    box-shadow: 2px 0 12px rgba(44,26,14,.08);
   }
   .sidebar-logo {
     width: 40px; height: 40px;
@@ -49,20 +50,19 @@ Error generating stack: `+e.message+`
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px; color: #000;
+    font-size: 20px; color: #fff;
     margin-bottom: 32px;
+    overflow: hidden;
   }
-  .sidebar-nav { flex: 1; display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 0 10px; }
   .nav-btn {
     width: 100%; aspect-ratio: 1;
     background: none; border: none; border-radius: var(--radius);
     color: var(--muted); cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     font-size: 20px; transition: all .2s;
-    position: relative;
   }
   .nav-btn:hover { background: var(--surface2); color: var(--text); }
-  .nav-btn.active { background: var(--accent); color: #000; }
+  .nav-btn.active { background: var(--accent); color: #fff; }
   .sidebar-bottom { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 0 10px; width: 100%; }
   .theme-toggle {
     width: 52px; border: 1px solid var(--border); border-radius: var(--radius);
@@ -87,13 +87,14 @@ Error generating stack: `+e.message+`
   .auth-page {
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
     background: var(--bg);
-    background-image: radial-gradient(circle at 20% 50%, rgba(212,168,67,.08) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(212,168,67,.05) 0%, transparent 40%);
+    background-image: radial-gradient(circle at 20% 50%, rgba(139,94,60,.12) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(139,94,60,.08) 0%, transparent 40%);
   }
   .auth-card {
     width: 100%; max-width: 420px; background: var(--surface);
     border: 1px solid var(--border); border-radius: 16px;
     padding: 40px; margin: 20px;
+    box-shadow: 0 8px 32px rgba(44,26,14,.15);
   }
   .auth-logo { text-align: center; margin-bottom: 32px; }
   .auth-logo img { width: 220px; max-height: 120px; object-fit: contain; display: block; margin: 0 auto 8px; }
@@ -121,7 +122,7 @@ Error generating stack: `+e.message+`
     font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
     cursor: pointer; transition: all .2s; display: inline-flex; align-items: center; gap: 8px;
   }
-  .btn-primary { background: var(--accent); color: #000; }
+  .btn-primary { background: var(--accent); color: #fff; }
   .btn-primary:hover { background: var(--accent2); }
   .btn-ghost { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
   .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
@@ -161,8 +162,8 @@ Error generating stack: `+e.message+`
   .fab {
     position: fixed; bottom: 32px; right: 32px;
     width: 60px; height: 60px; border-radius: 50%;
-    background: var(--accent); border: none; color: #000;
-    font-size: 28px; cursor: pointer; box-shadow: 0 4px 20px rgba(212,168,67,.4);
+    background: var(--accent); border: none; color: #fff;
+    font-size: 28px; cursor: pointer; box-shadow: 0 4px 20px rgba(139,94,60,.4);
     display: flex; align-items: center; justify-content: center;
     transition: all .2s; z-index: 50;
   }
